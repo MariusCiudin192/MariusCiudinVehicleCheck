@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Vehicle Check Form</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Daily Vehicle Check Form</h1>
+    </header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="form.html">Driver Check Form</a>
+    </nav>
+    <div class="container">
+        <form id="inspectionForm" onsubmit="return false;">
+            <label for="driver">Driver Name:</label>
+            <input type="text" id="driver" required>
+
+            <label for="vehicle">Vehicle Registration:</label>
+            <input type="text" id="vehicle" required>
+
+            <div class="check-item">
+                <span>Lights</span>
+                <div class="buttons">
+                    <button type="button" class="pass-button">Pass</button>
+                    <button type="button" class="fail-button">Fail</button>
+                </div>
+            </div>
+            <div class="check-item">
+                <span>Brakes</span>
+                <div class="buttons">
+                    <button type="button" class="pass-button">Pass</button>
+                    <button type="button" class="fail-button">Fail</button>
+                </div>
+            </div>
+            <div class="check-item">
+                <span>Tyres</span>
+                <div class="buttons">
+                    <button type="button" class="pass-button">Pass</button>
+                    <button type="button" class="fail-button">Fail</button>
+                </div>
+            </div>
+
+            <label for="notes">Notes / Defects:</label>
+            <textarea id="notes" rows="4"></textarea>
+
+            <button type="button" id="generateAndEmailBtn">Generate & Email Report</button>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
