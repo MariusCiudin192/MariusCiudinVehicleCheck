@@ -21,5 +21,10 @@
         <p>To begin, please go to the Driver Check Form.</p>
         <a href="form.html" class="button">Start New Inspection</a>
     </div>
+    <script>
+    if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('sw.js');
+    }
+</script>
 </body>
 </html>
